@@ -28,12 +28,12 @@ function Header() {
   );
 
   const categories = [
-    "New Arrivals",
-    "Men",
-    "Women",
-    "Kids",
-    // "Accessories",
-    "Sale",
+    "T-Shirts",
+    "Pants",
+    "Shoes",
+    "Hoodies",
+    "Watches",
+    // "Sale",
   ];
 
   return (
@@ -84,7 +84,7 @@ function Header() {
                 {categories.map((category) => (
                   <Link
                     key={category}
-                    href={`/category/${category.toLowerCase().replace(" ", "-")}`}
+                    href={`/categories/${category.toLowerCase().replace(" ", "-")}`}
                     className="text-gray-600 hover:text-gray-900 font-medium"
                   >
                     {category}
@@ -92,12 +92,25 @@ function Header() {
                 ))}
                 <button
                   className="text-gray-600 hover:text-gray-900 font-medium flex items-center gap-1"
-                  // onMouseEnter={() => setIsHoveringCategories(true)}
-                  // onMouseLeave={() => setIsHoveringCategories(false)}
+                  onClick={() => setIsMenuOpen(true)}
                 >
                   More
                   <ChevronDown className="w-4 h-4" />
                 </button>
+                {/* {isMenuOpen && (
+                  <div className="absolute top-16 left-10 max-w-2xl bg-white border border-gray-100 py-4 px-6 space-y-4">
+                    {categories.map((category) => (
+                      <Link
+                        key={category}
+                        href={`/categories/${category.toLowerCase().replace(" ", "-")}`}
+                        className="text-gray-600 hover:text-gray-900 font-medium"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        {category}
+                      </Link>
+                    ))}
+                  </div>
+                )} */}
               </nav>
             </div>
 
@@ -210,7 +223,7 @@ function Header() {
                 {categories.map((category) => (
                   <Link
                     key={category}
-                    href={`/category/${category.toLowerCase().replace(" ", "-")}`}
+                    href={`/categories/${category.toLowerCase().replace(" ", "-")}`}
                     className="block text-gray-600 hover:text-gray-900 font-medium py-2"
                     onClick={() => setIsMenuOpen(false)}
                   >
