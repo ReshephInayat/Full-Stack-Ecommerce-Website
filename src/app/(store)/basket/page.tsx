@@ -133,7 +133,7 @@ function BasketPage() {
               {isLoading ? "Processing..." : "Checkout"}
             </button>
           ) : (
-            <SignInButton mode="modal" forceRedirectUrl={pathname}>
+            <SignInButton mode="modal" forceRedirectUrl={pathname} signUpForceRedirectUrl={pathname}>
               <button className="mt-6 w-full bg-red-600 text-white px-4 py-3 rounded">
                 Sign in to checkout
               </button>
