@@ -175,7 +175,7 @@ function Header() {
                       </div>
                     </div>
                   ) : (
-                    <SignInButton mode="modal" forceRedirectUrl={pathname}>
+                    <SignInButton signUpFallbackRedirectUrl={pathname} mode="modal" forceRedirectUrl={pathname}>
                       <button className="hidden lg:flex items-center space-x-2 text-gray-600 hover:text-gray-900">
                         <LogIn className="w-6 h-6" />
                         <span className="font-medium">Sign In</span>

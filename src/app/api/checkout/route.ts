@@ -27,7 +27,7 @@ export async function POST(request: Request) {
     // Define URLs for success and cancellation
     const baseUrl =
       process.env.NODE_ENV === "production"
-        ? `https://${process.env.VERCEL_URL}`
+        ? `https://stylor.vercel.app`
         : `${process.env.NEXT_PUBLIC_URL}`;
     const successUrl = `${baseUrl}/success?session_id={CHECKOUT_SESSION_ID}&orderNumber=${metadata.orderNumber}`;
     const cancelUrl = `${baseUrl}/basket`;
